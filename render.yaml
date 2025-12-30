@@ -2,5 +2,5 @@ services:
   - type: web
     name: backend-dswi
     runtime: java
-    buildCommand: ./mvnw clean package -DskipTests
+    buildCommand: bash -c "chmod +x ./mvnw && ./mvnw clean package -DskipTests"
     startCommand: java -jar target/samsung-0.0.1-SNAPSHOT.jar
